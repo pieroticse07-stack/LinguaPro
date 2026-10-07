@@ -1,0 +1,81 @@
+<section id="idiomas" class="py-5 bg-light">
+
+  <div class="container">
+
+    <div class="text-center mb-5">
+
+      <span class="badge bg-primary mb-2">
+        NUESTROS CURSOS
+      </span>
+
+      <h2 class="fw-bold">
+        Aprende un nuevo idioma
+      </h2>
+
+      <p class="text-muted">
+        Elige el idioma que quieres aprender.
+      </p>
+
+    </div>
+
+    <div class="row g-4">
+
+      @for (idioma of idiomas; track idioma.id) {
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+          <div class="card h-100 border-0 shadow-sm">
+
+            <div class="card-body p-4">
+
+              <div class="rounded-circle bg-primary text-white
+                          d-flex align-items-center justify-content-center
+                          mb-3"
+                   style="width: 60px; height: 60px;">
+
+                <span class="fw-bold">
+                  {{ idioma.nombre.charAt(0) }}
+                </span>
+
+              </div>
+
+              <h4 class="fw-bold">
+                {{ idioma.nombre }}
+              </h4>
+
+              <p>
+                <strong>Nivel:</strong>
+                {{ idioma.nivel }}
+              </p>
+
+              <p>
+                <strong>Duración:</strong>
+                {{ idioma.duracion }}
+              </p>
+
+              <p>
+                <strong>Modalidad:</strong>
+                {{ idioma.modalidad }}
+              </p>
+
+              <h5 class="text-primary">
+                S/ {{ idioma.precio }}
+              </h5>
+
+              <button class="btn btn-primary w-100 mt-3">
+                Más información
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

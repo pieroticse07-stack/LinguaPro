@@ -1,0 +1,65 @@
+<section class="py-5 bg-light">
+
+  <div class="container">
+
+    <div class="text-center mb-5">
+
+      <span class="badge bg-warning text-dark mb-2">
+        TESTIMONIOS
+      </span>
+
+      <h2 class="fw-bold">
+        Lo que dicen nuestros estudiantes
+      </h2>
+
+    </div>
+
+    <div class="row g-4">
+
+      @for (resena of resenas; track resena.id) {
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+          <div class="card border-0 shadow-sm h-100">
+
+            <div class="card-body p-4">
+
+              <div class="text-warning fs-4 mb-3">
+
+                @for (estrella of [1,2,3,4,5]; track estrella) {
+
+                  <span>
+                    {{ estrella <= resena.puntuacion ? '★' : '☆' }}
+                  </span>
+
+                }
+
+              </div>
+
+              <p class="fst-italic">
+                "{{ resena.comentario }}"
+              </p>
+
+              <hr>
+
+              <h6 class="fw-bold">
+                {{ resena.estudiante }}
+              </h6>
+
+              <small class="text-muted">
+                Estudiante LinguaPro
+              </small>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

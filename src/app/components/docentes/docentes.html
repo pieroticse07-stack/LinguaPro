@@ -1,0 +1,60 @@
+<section class="py-5">
+
+  <div class="container">
+
+    <div class="text-center mb-5">
+
+      <span class="badge bg-primary mb-2">
+        NUESTROS DOCENTES
+      </span>
+
+      <h2 class="fw-bold">
+        Profesores especializados
+      </h2>
+
+      <p class="text-muted">
+        Aprende con profesionales especializados.
+      </p>
+
+    </div>
+
+    <div class="row g-4">
+
+      @for (docente of docentes; track docente.id) {
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+          <div class="card border-0 shadow-sm h-100">
+
+            <img
+              [src]="docente.imagen"
+              class="card-img-top docente-img"
+              [alt]="docente.nombre">
+
+            <div class="card-body text-center">
+
+              <h5 class="fw-bold">
+                {{ docente.nombre }}
+              </h5>
+
+              <p class="text-primary mb-1">
+                {{ docente.especialidad }}
+              </p>
+
+              <p class="text-muted">
+                {{ docente.experiencia }} de experiencia
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

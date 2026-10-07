@@ -1,0 +1,60 @@
+<section class="py-5">
+
+  <div class="container">
+
+    <div class="text-center mb-5">
+
+      <span class="badge bg-danger mb-2">
+        OFERTAS
+      </span>
+
+      <h2 class="fw-bold">
+        Promociones vigentes
+      </h2>
+
+    </div>
+
+    <div class="row g-4">
+
+      @for (promocion of promociones; track promocion.id) {
+
+        <div class="col-12 col-md-6 col-lg-4">
+
+          <div class="card border-0 shadow h-100">
+
+            <div class="card-body p-4">
+
+              <span class="badge bg-danger mb-3">
+                -{{ promocion.descuento }}%
+              </span>
+
+              <h4 class="fw-bold">
+                {{ promocion.titulo }}
+              </h4>
+
+              <p class="text-muted">
+                {{ promocion.descripcion }}
+              </p>
+
+              <p>
+                <strong>Válido hasta:</strong>
+                {{ promocion.vigencia }}
+              </p>
+
+              <button class="btn btn-outline-danger w-100">
+                Aprovechar promoción
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
